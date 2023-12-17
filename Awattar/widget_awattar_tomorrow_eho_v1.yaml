@@ -1,0 +1,599 @@
+uid: widget_awattar_tomorrow_eho_v1
+tags: []
+props:
+  parameters:
+    - description: Widget Title
+      label: Widget Title
+      name: widget_title
+      required: false
+      type: TEXT
+    - description: Widget Title Color (default= black)
+      label: Widget Title Color
+      name: widget_title_color
+      required: false
+    - description: (Tomorrow) String
+      label: Tomorrow String
+      name: tomorrow_string
+      required: false
+      type: TEXT
+    - context: item
+      description: Tomorrows Date String Item
+      label: Tomorrows DateString
+      name: date_string
+      required: false
+      type: TEXT
+    - description: String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verfügbar)
+      label: No tomorrow data String
+      name: nodata_string
+      required: false
+      type: TEXT
+    - description: String to show for Maximum price (include = and spaces)
+      label: Maximum String
+      name: max_string
+      required: false
+      type: TEXT
+    - description: String to show for Maximum price (include = and spaces)
+      label: Minimum String
+      name: min_string
+      required: false
+      type: TEXT
+    - description: String to show for current price (include = and spaces)
+      label: Current String
+      name: act_string
+      required: false
+      type: TEXT
+    - description: Color to indicate maximum price (eg. red, rgb(255, 80, 80) )
+      label: Max Price Color
+      name: max_color
+      required: true
+    - description: Color to indicate minimum price (eg. green, rgb(0, 204, 0) )
+      label: Min Price Color
+      name: min_color
+      required: true
+    - description: standard Color for bars (eg. blue, rgb(51, 102, 204) )
+      label: Standard Bar Color
+      name: std_color
+      required: true
+    - description: Opacity for Bars (0.0 - 1.0)
+      label: Opacity bars
+      name: opacity_bars
+      required: true
+  parameterGroups: []
+timestamp: Dec 16, 2023, 10:45:46 PM
+component: f7-card
+config:
+  style:
+    color: "=(props.widget_title_color) ? (props.widget_title_color) : 'black'"
+    margin: auto
+    padding: 0px
+  title: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string) + ' .... Daten erst ab 14:00 verfügbar') : ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string))"
+slots:
+  content:
+    - component: Label
+      config:
+        style:
+          color: black
+          background: rgb(255, 102, 102)
+          font-size: 12px
+          font-weight: bold
+          margin-left: 15px
+          margin-top: -5%
+        text: =((props.max_string) + @@'awattar_price_tomorrow_max' + " ct/kWh  (" + @@'awattar_time_tomorrow_max' + ")")
+        visible: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? false : true"
+    - component: Label
+      config:
+        style:
+          color: black
+          background: lightblue
+          font-size: 12px
+          font-weight: bold
+          margin-left: 15px
+          margin-top: -0%
+        text: =((props.act_string) + @@'aWATTar_Stundenpreise_Current_Totalgross' + " ct/kWh")
+        visible: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? false : true"
+    - component: Label
+      config:
+        style:
+          color: black
+          background: lightgreen
+          font-size: 12px
+          font-weight: bold
+          margin-left: 15px
+          margin-top: 0%
+        text: =((props.min_string) + @@'awattar_price_tomorrow_min' + " ct/kWh  (" + @@'awattar_time_tomorrow_min' + ")")
+        visible: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? false : true"
+    - component: svg
+      config:
+        height: 100%
+        viewBox: 0 0 1300 580
+        width: 100%
+        visible: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? false : true"
+      slots:
+        default:
+          - component: text
+            config:
+              content: =@@'awattar_price_scale_max'
+              style:
+                font-size: 44px
+              fill: black
+              x: 0%
+              y: 7%
+          - component: text
+            config:
+              content: =@@'awattar_price_scale_max' * 0.75
+              style:
+                font-size: 44px
+              fill: black
+              x: 0%
+              y: 28%
+          - component: text
+            config:
+              content: =@@'awattar_price_scale_max' * 0.5
+              style:
+                font-size: 44px
+              fill: black
+              x: 0%
+              y: 48%
+          - component: text
+            config:
+              content: =@@'awattar_price_scale_max' * 0.25
+              style:
+                font-size: 44px
+              fill: black
+              x: 0%
+              y: 71%
+          - component: text
+            config:
+              content: =@@'awattar_price_scale_max' * 0.0
+              style:
+                font-size: 44px
+              fill: black
+              x: 0%
+              y: 90%
+          - component: text
+            config:
+              content: 0h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 2%
+              y: 99%
+          - component: text
+            config:
+              content: 3h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 13.5%
+              y: 99%
+          - component: text
+            config:
+              content: 6h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 26%
+              y: 99%
+          - component: text
+            config:
+              content: 9h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 38%
+              y: 99%
+          - component: text
+            config:
+              content: 12h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 49%
+              y: 99%
+          - component: text
+            config:
+              content: 15h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 61%
+              y: 99%
+          - component: text
+            config:
+              content: 18h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 73%
+              y: 99%
+          - component: text
+            config:
+              content: 21h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 85.2%
+              y: 99%
+          - component: text
+            config:
+              content: 24h
+              style:
+                font-weight: bold
+                font-size: 44px
+              fill: black
+              x: 96%
+              y: 99%
+          - component: polyline
+            config:
+              fill: none
+              points: 60 20, 1300 20, 1300 520, 60 520, 60 20
+              stroke: gray
+              stroke-width: 6px
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 16%
+              x2: 16%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: gray
+              stroke-width: 4px
+              x1: 28%
+              x2: 28%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 40%
+              x2: 40%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: black
+              stroke-width: 4px
+              x1: 52%
+              x2: 52%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 64%
+              x2: 64%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: gray
+              stroke-width: 4px
+              x1: 76%
+              x2: 76%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 88%
+              x2: 88%
+              y1: 4%
+              y2: 90%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 14.2%
+              y2: 14.2%
+          - component: line
+            config:
+              stroke: gray
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 25%
+              y2: 25%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 35.5%
+              y2: 35.5%
+          - component: line
+            config:
+              stroke: gray
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 46%
+              y2: 46%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 57%
+              y2: 57%
+          - component: line
+            config:
+              stroke: gray
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 68%
+              y2: 68%
+          - component: line
+            config:
+              stroke: gray
+              stroke-dasharray: 10, 10
+              stroke-width: 4px
+              x1: 4.2%
+              x2: 100%
+              y1: 79%
+              y2: 79%
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 0) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 0) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =((@@'aWATTar_Stundenpreise_Tomorrow00_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 2.4%
+              x: 4.9%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow00_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 1) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 1) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow01_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 8%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow01_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 2) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 2) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow02_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 12%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow02_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 3) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 3) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow03_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 16%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow03_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 4) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 4) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow04_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 20%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow04_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 5) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 5) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow05_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 24%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow05_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 6) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 6) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow06_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 28%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow06_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 7) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 7) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow07_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 32%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow07_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 8) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 8) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow08_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 36%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow08_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 9) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 9) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow09_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 40%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow09_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 10) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 10) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow10_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 44%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow10_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 11) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 11) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow11_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 48%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow11_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 12) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 12) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow12_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 52%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow12_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 13) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 13) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow13_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 56%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow13_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 14) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 14) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow14_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 60%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow14_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 15) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 15) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow15_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 64%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow15_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 16) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 16) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow16_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 68%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow16_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 17) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 17) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow17_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 72%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow17_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 18) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 18) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow18_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 76%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow18_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 19) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 19) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow19_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 80%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow19_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 20) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 20) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow20_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 84%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow20_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 21) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 21) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow21_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 88%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow21_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 22) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 22) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow22_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 92%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow22_Totalgross' * @@'awattar_price_scale_factor')) + "%"
+          - component: rect
+            config:
+              fill: "= (@@'aWATTar_tomorrow_max_hour' == 23) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 23) ? (props.min_color) : (props.std_color)"
+              fill-opacity: =(props.opacity_bars)
+              height: =(@@'aWATTar_Stundenpreise_Tomorrow23_Totalgross' * @@'awattar_price_scale_factor') + "%"
+              stroke: black
+              stroke-width: 4px
+              width: 3.333%
+              x: 96%
+              y: =(89.6 - (@@'aWATTar_Stundenpreise_Tomorrow23_Totalgross' * @@'awattar_price_scale_factor')) + "%"
