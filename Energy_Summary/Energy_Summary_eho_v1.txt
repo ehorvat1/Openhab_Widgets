@@ -1,3 +1,5 @@
+A (maybe not complete) list of changes to version OH3_Livio_Energy_Summary_MikeTheTux_3 :
+
 1) Introduced individual Colors and Background for every Item and block
 2) Removed arrow right and "-" from Home Consumption
 3) Item itemHomeConsumption2 designed to show now "Import kWh" , added arrow right
@@ -13,3 +15,9 @@
     path2 now M47,0 v15 c0,27 -10,36 -30,36 h-20 (was M47,0 v15 c0,27 -10,32 -30,32 h-20)
     path3 now M0,54 H100 (was M0,50 H100)
 11) Gauge in the middle shows now just an individual Item: itemSelfConsumption and a configurable ItemName. No color changes here any more.
+
+
+Changes to my v1 :
+Animations (except for Battery) are now changing in size and speed, depending on their representing value. Search for “.state)” in the code to see how its done.
+Border width of the blocks set to 2px
+Battery animation. Charging animation visible if ItemBattery is negative. Decharging (towards house) visible if ItemBattery is positive. Search for “(@props.itemBattery) < 0)” and “(@props.itemBattery) > 0)” in the code to find how/where this is done.
