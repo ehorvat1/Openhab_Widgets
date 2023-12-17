@@ -1,5 +1,7 @@
 uid: widget_awattar_tomorrow_eho_v1
-tags: []
+tags: 
+  - awattar
+  - price plot
 props:
   parameters:
     - description: Widget Title
@@ -22,7 +24,7 @@ props:
       name: date_string
       required: false
       type: TEXT
-    - description: String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verf√ºgbar)
+    - description: String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verfÅgbar)
       label: No tomorrow data String
       name: nodata_string
       required: false
@@ -59,14 +61,14 @@ props:
       name: opacity_bars
       required: true
   parameterGroups: []
-timestamp: Dec 16, 2023, 10:45:46 PM
+timestamp: Dec 17, 2023, 6:13:12 PM
 component: f7-card
 config:
   style:
     color: "=(props.widget_title_color) ? (props.widget_title_color) : 'black'"
     margin: auto
     padding: 0px
-  title: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string) + ' .... Daten erst ab 14:00 verf√ºgbar') : ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string))"
+  title: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string) + ' .... Daten erst ab 14:00 verfÅgbar') : ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string))"
 slots:
   content:
     - component: Label

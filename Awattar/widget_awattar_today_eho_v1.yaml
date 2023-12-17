@@ -1,5 +1,7 @@
 uid: widget_awattar_today_eho_v1
-tags: []
+tags: 
+  - awattar
+  - price plot
 props:
   parameters:
     - description: Widget Title

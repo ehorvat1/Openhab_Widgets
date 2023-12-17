@@ -1,5 +1,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+// OpenHAB Rule DSL file rAwattarhelper.js to support bar chart for Awattar prices
+// Should run in a cron event every 5 to 60 minutes (at least at full hour)
 //
+// Known issue: Does currently not support negative prices....
+//
+// see also Github: https://github.com/ehorvat1/Openhab_Widgets/tree/main
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 var price_max = 0.0
 var price_min = 0.0
@@ -134,15 +139,13 @@ price_tomorrow_max = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Numbe
   if (price_tomorrow_max < (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number)) { price_tomorrow_max = (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue hour_tomorrow_max = 22 }  
   if (price_tomorrow_max < (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number)) { price_tomorrow_max = (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue hour_tomorrow_max = 23 }  
 //
-  awattar_price_tomorrow_max.sendCommand(price_tomorrow_max)
+  awattar_price_tomorrow_max.sendCommand(price_tomorrow_max)  //send price_tomorrow_max to item 
   aWATTar_tomorrow_max_hour.sendCommand(hour_tomorrow_max)
 //
   time_tomorrow_max = hour_tomorrow_max.toString() + " - " + (hour_tomorrow_max+1).toString()
   awattar_time_tomorrow_max.sendCommand(time_tomorrow_max)
 } else {
-  awattar_price_tomorrow_max.sendCommand(0)
-  aWATTar_tomorrow_max_hour.sendCommand(0)
-  awattar_time_tomorrow_max.sendCommand("Daten ab 14:00")
+  awattar_price_tomorrow_max.sendCommand(0)  //Widget widget_awattar_tomorrow_eho_v1 will detect "no data" if both items awattar_price_tomorrow_max and awattar_price_tomorrow_min are 0
 }
 //
 //
@@ -174,16 +177,14 @@ price_tomorrow_min = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Numbe
   if (price_tomorrow_min > (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number)) { price_tomorrow_min = (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue hour_tomorrow_min = 22 }
   if (price_tomorrow_min > (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number)) { price_tomorrow_min = (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue hour_tomorrow_min = 23 }
 //
-awattar_price_tomorrow_min.sendCommand(price_tomorrow_min)
+awattar_price_tomorrow_min.sendCommand(price_tomorrow_min) //send price_tomorrow_min to item 
 aWATTar_tomorrow_min_hour.sendCommand(hour_tomorrow_min)
 //
 time_tomorrow_min = hour_tomorrow_min.toString() + " - " + (hour_tomorrow_min+1).toString()
 awattar_time_tomorrow_min.sendCommand(time_tomorrow_min)
 //
 } else {
-  awattar_price_tomorrow_min.sendCommand(0)
-  aWATTar_tomorrow_min_hour.sendCommand(0)
-  awattar_time_tomorrow_min.sendCommand("Daten ab 14:00")
+  awattar_price_tomorrow_min.sendCommand(0)  //Widget widget_awattar_tomorrow_eho_v1 will detect "no data" if both items awattar_price_tomorrow_max and awattar_price_tomorrow_min are 0
 }  
 //
 if (price_today_max < price_tomorrow_max) { price_max = price_tomorrow_max } else { price_max = price_today_max }
