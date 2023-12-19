@@ -1,4 +1,4 @@
-uid: widget_awattar_tomorrow_eho_v1
+uid: widget_awattar_tomorrow_eho_v0_1
 tags:
   - awattar
   - price plot
@@ -44,7 +44,7 @@ props:
       name: date_string
       required: false
       type: TEXT
-    - description: String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verfügbar)
+    - description: String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verfÃ¼gbar)
       label: No tomorrow data String
       name: nodata_string
       required: false
@@ -88,7 +88,7 @@ config:
     color: "=(props.widget_title_color) ? (props.widget_title_color) : 'black'"
     margin: auto
     padding: 0px
-  title: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string) + ' .... Daten erst ab 14:00 verfügbar') : ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string))"
+  title: "= ((@@'awattar_price_tomorrow_max' == 0) & (@@'awattar_price_tomorrow_min' == 0)) ? ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string) + ' .... Daten erst ab 14:00 verfÃ¼gbar') : ((props.widget_title) + ' ' + (props.tomorrow_string) + ', ' + (@@props.date_string))"
 slots:
   content:
     - component: Label
