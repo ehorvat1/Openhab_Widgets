@@ -2,6 +2,7 @@ Number awattar_price_max "awattar_price_max" (aWATTar_Stundenpreise) ["Point"]
 Number awattar_price_min "awattar_price_min" (aWATTar_Stundenpreise) ["Point"]
 Number awattar_price_scale_max "awattar_price_scale_max" (aWATTar_Stundenpreise) ["Point"]
 Number awattar_price_scale_min "awattar_price_scale_min" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_scale_factor "aWATTar_price_scale_factor" (aWATTar_Stundenpreise) ["Point"]
 
 String aWATTar_Date_today "aWATTar_Date_today" (aWATTar_Stundenpreise) ["Point"]
 String aWATTar_Date_tomorrow "aWATTar_Date_tomorrow" (aWATTar_Stundenpreise) ["Point"]
