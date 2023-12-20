@@ -39,7 +39,10 @@ Bar plot won't show negative prices
    b) Press "+" button to add a Widget. Exchange standard code with all lines from awattar_graph_tomorrow_eho_v0_1.yaml. Press Save. Go Back
    
 10) Add Widgets to a MainUI Layout or tabbed Page.
+    
    Select one of the just created Widgets "awattar_graph_today_eho_v0_1" or "awattar_graph_tomorrow_eho_v0_1".
-   Configure the Widgets. You may insert code from Stompreise_heute.yaml for todays widget or from Stompreise_morgen.yaml for tomorrows widget.
+   Configure the Widgets. 
+   
+   You may insert code from Stompreise_heute.yaml for todays widget or from Stompreise_morgen.yaml for tomorrows widget.
    
 Widgets and rAwattarhelper rule are based on standard Item names created by aWATTar binding, which builds item names for hourly prices like: aWATTar_Stundenpreise_Today00_Totalgross or aWATTar_Stundenpreise_Tomorrow14_Totalgross . If your aWATTar Items do not follow this naming convention then the widget can be modified using its parameters for Prefix, Prefix_Today and Postfix. The Item names in the rule must be edited manually to match different naming conventions.
