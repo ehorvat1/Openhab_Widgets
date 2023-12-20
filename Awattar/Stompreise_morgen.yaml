@@ -14,5 +14,5 @@ config:
   tomorrow_string: morgen
   widget_title: Strompreise
   widget_title_color: black
-  nodata_string: ....Daten erst ab 14:00 verf√ºgbar
+  nodata_string: ....Daten erst ab 14:00 verfÅgbar
 slots: null
