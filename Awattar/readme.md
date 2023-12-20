@@ -1,3 +1,5 @@
+<img src="Price_plot_today_v1.png">
+
 Known Issues:
 Bar plot won't show negative prices
 
