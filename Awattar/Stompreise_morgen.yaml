@@ -1,4 +1,4 @@
-component: widget:widget_awattar_tomorrow_eho_v1
+component: widget:widget_awattar_tomorrow_eho_v0_1
 config:
   act_string: "Act = "
   date_string: aWATTar_Date_tomorrow
