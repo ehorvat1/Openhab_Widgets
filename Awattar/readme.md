@@ -16,12 +16,16 @@ Bar plot won't show negative prices
  a) Add aWATTar Stundenpreise items.
  
 In Things select "aWATTar Stundenpreise" thing, go to Channels, scroll to the bottom of page 
-and do "Add Equipment to Model". Select all 49 "Gross Total" points (or do a "Select All" to select all points - but this creates much more items than needed...)
-Click "Add to Model" button
+and do "Add Equipment to Model". Select all 49 "Gross Total" points - 1 for current, 24 for today and 24 for tomorrow. You may also do a "Select All" to select all points - but this will create much more items than needed....)
+Click "Add to Model" button. 
+
+This creates and links the items. Also a Group Equipment named "aWATTar_Stundenpreise" is created.
    
- b) Add special aWATTar items used in bar graph. In developer tools go to "Add Items from Textual Definition" page . 
-      Copy and insert all lines from "items_awattar_add.txt" to Add Items from Textual Definition window.
-	  Press "Add" top add the 20 items.
+ b) Add special aWATTar items used in bar graph. 
+ 
+ In developer tools go to "Add Items from Textual Definition" page . 
+Copy and insert all lines from "items_awattar_add.txt" to Add Items from Textual Definition window.
+Press "Add" top add the 20 items.
 ##### 4) Add "rAwattarhelper" Rule (cron triggered Rule DSL script):
    Go to Rules in Setup and press "+" to add a rule. Insert **rAwattarhelper** into Name filed.
    
