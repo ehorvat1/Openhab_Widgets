@@ -1,4 +1,4 @@
-<img src="Price_plot_today_v1.png">
+<img src="Price_plot_today_v1.png"> <img src="Price_plot_tomorrow_ok_v1.png"> <img src="Price_plot_tomorrow_nodata_v1.png">
 
 Known Issues:
 Bar plot won't show negative prices
