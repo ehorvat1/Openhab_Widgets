@@ -1,4 +1,4 @@
-uid: widget_awattar_today_eho_v0_1
+uid: widget_awattar_today_eho_v1
 tags:
   - awattar
   - price plot
@@ -9,6 +9,10 @@ props:
       name: widget_title
       required: false
       type: TEXT
+    - description: Widget Title Color (default= blue)
+      label: Widget Title Color
+      name: widget_title_color
+      required: false
     - description: Prefix (Items prefix part before _Today and hour numbers, e.g. aWATTar_Stundenpreise ....to generate e.g aWATTar_Stundenpreise_Today14_Totalgross)
       label: Prefix
       name: prefix
@@ -29,10 +33,6 @@ props:
       name: prefix_current
       required: false
       type: TEXT
-    - description: Widget Title Color (default= blue)
-      label: Widget Title Color
-      name: widget_title_color
-      required: false
     - description: (Today) String
       label: Today String
       name: today_string
@@ -44,47 +44,59 @@ props:
       name: date_string
       required: false
       type: TEXT
-    - description: String to show for Maximum price (include = and spaces)
+    - description: String to show for Maximum price (eg. Maximum= , please include also "=" and spaces)
       label: Maximum String
       name: max_string
       required: false
       type: TEXT
-    - description: String to show for Maximum price (include = and spaces)
+    - description: Backgroung Color for maximum price field (default= rgb(255, 102, 102) )
+      label: Backgroung Color for maximum price field
+      name: Maxprice_bgcolor
+      required: false 
+    - description: String to show for Maximum price (eg. Minimum= , please include also "=" and spaces)
       label: Minimum String
       name: min_string
       required: false
       type: TEXT
-    - description: String to show for current price (include = and spaces)
+    - description: Backgroung Color for minimum price field (default= lightgreen )
+      label: Backgroung Color for minimum price field
+      name: Minprice_bgcolor
+      required: false   
+    - description: String to show for current price (eg. Akt.Preis= , please include also "=" and spaces)
       label: Current String
       name: act_string
       required: false
       type: TEXT
-    - description: Color to indicate maximum price (eg. red, rgb(255, 80, 80) )
-      label: Max Price Color
+    - description: Backgroung Color for current price field (default= lightblue )
+      label: Backgroung Color for current price field
+      name: Actualprice_bgcolor
+      required: false 
+    - description: Bar Color to indicate maximum price (eg. red, rgb(255, 80, 80) )
+      label: Max Price Bar Color
       name: max_color
       required: true
-    - description: Color to indicate minimum price (eg. green, rgb(0, 204, 0) )
-      label: Min Price Color
+    - description: Bar Color to indicate minimum price (eg. green, rgb(0, 204, 0) )
+      label: Min PriceBar  Color
       name: min_color
       required: true
-    - description: standard Color for bars (eg. blue, rgb(51, 102, 204) )
-      label: Standard Bar Color
+    - description: Default Bar Color (eg. blue, rgb(51, 102, 204) )
+      label: Default Bar Color
       name: std_color
       required: true
-    - description: Opacity for Bars in past (0.0 - 1.0)
+    - description: Opacity for Bars in past (0.0 - 1.0 , e.g. 0.2)
       label: Opacity past
       name: opacity_past
       required: true
-    - description: Opacity for Bars in future (0.0 - 1.0)
+    - description: Opacity for Bars in future (0.0 - 1.0 , e.g. 0.5)
       label: Opacity future
       name: opacity_future
       required: true
-    - description: Opacity for current Bar(0.0 - 1.0)
+    - description: Opacity for current Bar (0.0 - 1.0 , e.g. 1)
       label: Opacity current
       name: opacity_current
       required: true
   parameterGroups: []
-timestamp: Dec 17, 2023, 10:48:38 PM
+timestamp: Dec 18, 2023, 4:33:51 PM
 component: f7-card
 config:
   style:
@@ -97,8 +109,8 @@ slots:
     - component: Label
       config:
         style:
+          background: "=(props.Maxprice_bgcolor) ? (props.Maxprice_bgcolor) : 'rgb(255, 102, 102)'"
           color: black
-          background: rgb(255, 102, 102)
           font-size: 12px
           font-weight: bold
           margin-left: 15px
@@ -107,8 +119,8 @@ slots:
     - component: Label
       config:
         style:
+          background: "=(props.Actualprice_bgcolor) ? (props.Actualprice_bgcolor) : 'lightblue'"
           color: black
-          background: lightblue
           font-size: 12px
           font-weight: bold
           margin-left: 15px
@@ -117,8 +129,8 @@ slots:
     - component: Label
       config:
         style:
+          background: "=(props.Minprice_bgcolor) ? (props.Minprice_bgcolor) : 'lightgreen'" 
           color: black
-          background: lightgreen
           font-size: 12px
           font-weight: bold
           margin-left: 15px
@@ -134,122 +146,122 @@ slots:
           - component: text
             config:
               content: =@@'awattar_price_scale_max'
+              fill: black
               style:
                 font-size: 44px
-              fill: black
               x: 0%
               y: 7%
           - component: text
             config:
               content: =@@'awattar_price_scale_max' * 0.75
+              fill: black
               style:
                 font-size: 44px
-              fill: black
               x: 0%
               y: 28%
           - component: text
             config:
               content: =@@'awattar_price_scale_max' * 0.5
+              fill: black
               style:
                 font-size: 44px
-              fill: black
               x: 0%
               y: 48%
           - component: text
             config:
               content: =@@'awattar_price_scale_max' * 0.25
+              fill: black
               style:
                 font-size: 44px
-              fill: black
               x: 0%
               y: 71%
           - component: text
             config:
               content: =@@'awattar_price_scale_max' * 0.0
+              fill: black
               style:
                 font-size: 44px
-              fill: black
               x: 0%
               y: 90%
           - component: text
             config:
               content: 0h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 2%
               y: 99%
           - component: text
             config:
               content: 3h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 13.5%
               y: 99%
           - component: text
             config:
               content: 6h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 26%
               y: 99%
           - component: text
             config:
               content: 9h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 38%
               y: 99%
           - component: text
             config:
               content: 12h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 49%
               y: 99%
           - component: text
             config:
               content: 15h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 61%
               y: 99%
           - component: text
             config:
               content: 18h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 73%
               y: 99%
           - component: text
             config:
               content: 21h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 85.2%
               y: 99%
           - component: text
             config:
               content: 24h
-              style:
-                font-weight: bold
-                font-size: 44px
               fill: black
+              style:
+                font-size: 44px
+                font-weight: bold
               x: 96%
               y: 99%
           - component: polyline

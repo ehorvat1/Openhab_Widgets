@@ -1,19 +1,18 @@
 component: widget:widget_awattar_today_eho_v1
 config:
-  widget_title: Strompreise
-  today_string: heute
-  opacity_past: "0.15"
-  opacity_future: "0.6"
-  opacity_current: "1"
-  max_string: "Max = "
-  min_string: "Min = "
-  act_string: "Act = "
-  max_color: red
-  std_color: blue
-  min_color: green
+  act_string: "Aktuell = "
   date_string: aWATTar_Date_today
-  prefix: aWATTar_Stundenpreise
+  max_color: red
+  max_string: "Max = "
+  min_color: green
+  min_string: "Min = "
+  opacity_current: "1"
+  opacity_future: "0.5"
+  opacity_past: "0.15"
   post: _Totalgross
+  prefix: aWATTar_Stundenpreise
   prefix_current: _Current
   prefix_today: _Today
-  widget_title_color: gray
+  std_color: blue
+  today_string: heute
+  widget_title: Strompreise

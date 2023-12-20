@@ -1,18 +1,18 @@
 component: widget:widget_awattar_tomorrow_eho_v1
 config:
-  widget_title: Strompreise
-  tomorrow_string: morgen
-  opacity_bars: "0.7"
-  max_string: "Max = "
-  min_string: "Min = "
   act_string: "Act = "
-  max_color: red
-  std_color: blue
-  min_color: green
   date_string: aWATTar_Date_tomorrow
-  prefix: aWATTar_Stundenpreise
+  max_color: red
+  max_string: "Max = "
+  min_color: green
+  min_string: "Min = "
   post: _Totalgross
+  prefix: aWATTar_Stundenpreise
   prefix_current: _Current
   prefix_tomorrow: _Tomorrow
+  std_color: blue
+  tomorrow_string: morgen
+  widget_title: Strompreise
   widget_title_color: black
+  nodata_string: ....Daten erst ab 14:00 verfügbar
 slots: null
