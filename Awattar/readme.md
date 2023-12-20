@@ -29,7 +29,9 @@ Bar plot won't show negative prices
    
    b) Add an Action....Run Script ...Rule DSL .... insert all lines from "rAwattarhelper.js" into the editor
       Click on "Save" !
-   You may test the rule by clicking on the Run button and check that rule does generate a Event log line showing Rule rAwattarhelper last run time.
+   
+   You may test the rule by clicking on the Run button and check that rule does generate a Event log line showing Rule rAwattarhelper last run time. To do this: Login to openhab operating system with ssh and issue "openhab-cli showlogs" command.
+   
 8) Add 2 Custom Widgets. In developer tools go to "Widgets" page.
    
    a) Press "+" button to add a Widget. Exchange standard code with all lines from awattar_graph_today_eho_v0_1.yaml. Press Save. Go Back
