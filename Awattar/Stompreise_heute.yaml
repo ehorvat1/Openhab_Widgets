@@ -1,4 +1,4 @@
-component: widget:widget_awattar_today_eho_v0_1
+component: widget:awattar_graph_today_eho_v0_1
 config:
   act_string: "Aktuell = "
   date_string: aWATTar_Date_today
