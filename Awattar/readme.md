@@ -62,3 +62,6 @@ In developer tools go to "Widgets" page.
 ### Notes:
 
 Widgets and rAwattarhelper rule are based on standard Item names created by aWATTar binding, which builds item names for hourly prices like: *aWATTar_Stundenpreise_Today00_Totalgross* or *aWATTar_Stundenpreise_Tomorrow14_Totalgross* . If your aWATTar Items do not follow this naming convention then the widget can be modified using its parameters for Prefix, Prefix_Today and Postfix. The Item names in the rule must be edited manually to match different naming conventions.
+
+### OpenHAB Commuinity Link:
+https://community.openhab.org/t/bar-chart-showing-awattar-hourly-prices/152171
