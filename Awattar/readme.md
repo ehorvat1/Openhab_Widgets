@@ -2,8 +2,9 @@
 <img src="Price_plot_today_v1.png"> <img src="Price_plot_tomorrow_ok_v1.png"> <img src="Price_plot_tomorrow_nodata_v1.png">
 Above shown: Today Widget /  Tomorrow Widget with data / Tomorrow Widget with no data
 
-### Known Issues:
-Bar plot won't show negative prices
+<img src="Price_plot_today_with_neg_prices_v2.png"> <img src="Price_plot_tomorrow_with_neg_prices_v2.png">
+
+Above shown: Today Widget containing negative prices /  Tomorrow Widget containing negative prices
 
 ### Installation:
 
@@ -25,7 +26,7 @@ This creates and links the items. Also a Group Equipment named "aWATTar_Stundenp
  
  In developer tools go to "Add Items from Textual Definition" page . 
 Copy and insert all lines from "items_awattar_add.txt" to Add Items from Textual Definition window.
-Press "Add" top add the 20 items.
+Press "Add" top add the 25 items.
 ##### 4) Add "rAwattarhelper" Rule (cron triggered Rule DSL script):
    Go to Rules in Setup and press "+" to add a rule. Insert **rAwattarhelper** into Name filed.
    
@@ -48,13 +49,13 @@ Running rule every 5 minutes is not mandatory, rule should run at least every 1 
 
 In developer tools go to "Widgets" page.
    
-   a) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_today_eho_v0_1.yaml**. Press Save. Go Back
+   a) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_today_eho_v0_2.yaml**. Press Save. Go Back
    
-   b) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_tomorrow_eho_v0_1.yaml**. Press Save. Go Back
+   b) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_tomorrow_eho_v0_2.yaml**. Press Save. Go Back
    
 ##### 6) Add Widgets to a MainUI Layout or tabbed Page.
     
-   After pressing "+" to add a card, select one of the just created Widgets "awattar_graph_today_eho_v0_1" or "awattar_graph_tomorrow_eho_v0_1".
+   After pressing "+" to add a card, select one of the just created Widgets "awattar_graph_today_eho_v0_2" or "awattar_graph_tomorrow_eho_v0_2".
    Configure the Widgets. 
    
    You may insert code from Stompreise_heute.yaml for todays widget or from Stompreise_morgen.yaml for tomorrows widget.
