@@ -1,6 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // OpenHAB Rule DSL file rAwattarhelper.js to support bar chart for Awattar prices
 // Should run in a cron event every 5 to 60 minutes (at least at full hour)
+// Version 0_2 (supports now negative prices)
 //
 //
 // see also Github: https://github.com/ehorvat1/Openhab_Widgets/tree/main
