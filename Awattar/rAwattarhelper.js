@@ -2,7 +2,6 @@
 // OpenHAB Rule DSL file rAwattarhelper.js to support bar chart for Awattar prices
 // Should run in a cron event every 5 to 60 minutes (at least at full hour)
 //
-// Known issue: Does currently not support negative prices....
 //
 // see also Github: https://github.com/ehorvat1/Openhab_Widgets/tree/main
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -19,8 +18,8 @@ var time_tomorrow_max = "0h - 1h"
 var hour_tomorrow_max = 0
 var price_tomorrow_min = 0.0
 var time_tomorrow_min = "0h - 1h"
-var price_scale_max = 0.0
-var price_scale_min = 0.0
+var price_scale_max = 0
+var price_scale_min = 0
 var hour_tomorrow_min = 0
 //
 var act_hour = 0
@@ -70,11 +69,11 @@ if (price_today_max < (aWATTar_Stundenpreise_Today21_Totalgross.state as Number)
 if (price_today_max < (aWATTar_Stundenpreise_Today22_Totalgross.state as Number)) { price_today_max = (aWATTar_Stundenpreise_Today22_Totalgross.state as Number).doubleValue hour_today_max = 22 }  
 if (price_today_max < (aWATTar_Stundenpreise_Today23_Totalgross.state as Number)) { price_today_max = (aWATTar_Stundenpreise_Today23_Totalgross.state as Number).doubleValue hour_today_max = 23 }  
 //
-awattar_price_today_max.sendCommand(price_today_max)
+aWATTar_price_today_max.sendCommand(price_today_max)
 aWATTar_today_max_hour.sendCommand(hour_today_max)
 //
 time_today_max = hour_today_max.toString() + " - " + (hour_today_max+1).toString()
-awattar_time_today_max.sendCommand(time_today_max)
+aWATTar_time_today_max.sendCommand(time_today_max)
 //
 //
 // find lowest price for today and set hour_today_min
@@ -104,11 +103,11 @@ if (price_today_min > (aWATTar_Stundenpreise_Today21_Totalgross.state as Number)
 if (price_today_min > (aWATTar_Stundenpreise_Today22_Totalgross.state as Number)) { price_today_min = (aWATTar_Stundenpreise_Today22_Totalgross.state as Number).doubleValue hour_today_min = 22 }
 if (price_today_min > (aWATTar_Stundenpreise_Today23_Totalgross.state as Number)) { price_today_min = (aWATTar_Stundenpreise_Today23_Totalgross.state as Number).doubleValue hour_today_min = 23 }
 //
-awattar_price_today_min.sendCommand(price_today_min)
+aWATTar_price_today_min.sendCommand(price_today_min)
 aWATTar_today_min_hour.sendCommand(hour_today_min)
 //
 time_today_min = hour_today_min.toString() + " - " + (hour_today_min+1).toString()
-awattar_time_today_min.sendCommand(time_today_min)
+aWATTar_time_today_min.sendCommand(time_today_min)
 //
 //
 // find highest price for tomorrow and set hour_tomorrow_max
@@ -139,13 +138,13 @@ price_tomorrow_max = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Numbe
   if (price_tomorrow_max < (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number)) { price_tomorrow_max = (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue hour_tomorrow_max = 22 }  
   if (price_tomorrow_max < (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number)) { price_tomorrow_max = (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue hour_tomorrow_max = 23 }  
 //
-  awattar_price_tomorrow_max.sendCommand(price_tomorrow_max)  //send price_tomorrow_max to item 
+  aWATTar_price_tomorrow_max.sendCommand(price_tomorrow_max)  //send price_tomorrow_max to item 
   aWATTar_tomorrow_max_hour.sendCommand(hour_tomorrow_max)
 //
   time_tomorrow_max = hour_tomorrow_max.toString() + " - " + (hour_tomorrow_max+1).toString()
-  awattar_time_tomorrow_max.sendCommand(time_tomorrow_max)
+  aWATTar_time_tomorrow_max.sendCommand(time_tomorrow_max)
 } else {
-  awattar_price_tomorrow_max.sendCommand(0)  //Widget widget_awattar_tomorrow_eho_v1 will detect "no data" if both items awattar_price_tomorrow_max and awattar_price_tomorrow_min are 0
+  aWATTar_price_tomorrow_max.sendCommand(0)  //Widget widget_aWATTar_tomorrow_eho_v1 will detect "no data" if both items aWATTar_price_tomorrow_max and aWATTar_price_tomorrow_min are 0
 }
 //
 //
@@ -177,35 +176,43 @@ price_tomorrow_min = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Numbe
   if (price_tomorrow_min > (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number)) { price_tomorrow_min = (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue hour_tomorrow_min = 22 }
   if (price_tomorrow_min > (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number)) { price_tomorrow_min = (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue hour_tomorrow_min = 23 }
 //
-awattar_price_tomorrow_min.sendCommand(price_tomorrow_min) //send price_tomorrow_min to item 
+aWATTar_price_tomorrow_min.sendCommand(price_tomorrow_min) //send price_tomorrow_min to item 
 aWATTar_tomorrow_min_hour.sendCommand(hour_tomorrow_min)
 //
 time_tomorrow_min = hour_tomorrow_min.toString() + " - " + (hour_tomorrow_min+1).toString()
-awattar_time_tomorrow_min.sendCommand(time_tomorrow_min)
+aWATTar_time_tomorrow_min.sendCommand(time_tomorrow_min)
 //
 } else {
-  awattar_price_tomorrow_min.sendCommand(0)  //Widget widget_awattar_tomorrow_eho_v1 will detect "no data" if both items awattar_price_tomorrow_max and awattar_price_tomorrow_min are 0
+  aWATTar_price_tomorrow_min.sendCommand(0)  //Widget widget_aWATTar_tomorrow_eho_v1 will detect "no data" if both items aWATTar_price_tomorrow_max and aWATTar_price_tomorrow_min are 0
 }  
 //
 if (price_today_max < price_tomorrow_max) { price_max = price_tomorrow_max } else { price_max = price_today_max }
-if (price_today_min < price_tomorrow_min) { price_min = price_tomorrow_min } else { price_min = price_today_min }
+if (price_today_min > price_tomorrow_min) { price_min = price_tomorrow_min }  else { price_min = price_today_min }
 //
-awattar_price_max.sendCommand(price_max)
-awattar_price_min.sendCommand(price_min)
+aWATTar_price_max.sendCommand(price_max)
+aWATTar_price_min.sendCommand(price_min)
 //
 // calculate the max to min for price scale (should be dividable by 4)
 //
 if (price_min > 0.0) {
   price_scale_max = ((price_max/4).intValue * 4) + 4
-  price_scale_min = 0.0    
+  price_scale_min = 0
 } else {
   price_scale_max = ((price_max/4).intValue * 4) + 4
-  price_scale_min = ((price_min/4).intValue * 4) - 4   
+  price_scale_min = (((price_min)/4).intValue * 4) - 4    
 }
 //
+aWATTar_price_scale_min.sendCommand(price_scale_min)
+aWATTar_price_scale_max.sendCommand(price_scale_max)
 //
-awattar_price_scale_max.sendCommand(price_scale_max)
-awattar_price_scale_min.sendCommand(price_scale_min)
-awattar_price_scale_factor.sendCommand(86 / (price_scale_max - price_scale_min))
+aWATTar_price_scale_0.sendCommand(price_scale_min)
+aWATTar_price_scale_25.sendCommand((((price_scale_max - price_scale_min) * 0.25) + price_scale_min).intValue)
+aWATTar_price_scale_50.sendCommand((((price_scale_max - price_scale_min) * 0.5) + price_scale_min).intValue)
+aWATTar_price_scale_75.sendCommand((((price_scale_max - price_scale_min) * 0.75) + price_scale_min).intValue)
+aWATTar_price_scale_100.sendCommand(price_scale_max)
 //
+aWATTar_price_scale_factor.sendCommand(86 / (price_scale_max - price_scale_min))
 //
+logInfo("Rule rAwattarhelper", "Rule rAwattarhelper was running at: {}", now.toLocalDateTime().toString())
+//
+// End of rAwattarhelper.js
