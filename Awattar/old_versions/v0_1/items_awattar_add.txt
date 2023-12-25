@@ -1,0 +1,24 @@
+Number aWATTar_price_max "aWATTar_price_max" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_min "aWATTar_price_min" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_scale_max "aWATTar_price_scale_max" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_scale_min "aWATTar_price_scale_min" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_scale_factor "aWATTar_price_scale_factor" (aWATTar_Stundenpreise) ["Point"]
+
+String aWATTar_Date_today "aWATTar_Date_today" (aWATTar_Stundenpreise) ["Point"]
+String aWATTar_Date_tomorrow "aWATTar_Date_tomorrow" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_actual_hour "aWATTar_actual_hour" (aWATTar_Stundenpreise) ["Point"]
+
+Number aWATTar_price_today_max "aWATTar_price_today_max" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_today_min "aWATTar_price_today_min" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_tomorrow_max "aWATTar_price_tomorrow_max" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_price_tomorrow_min "aWATTar_price_tomorrow_min" (aWATTar_Stundenpreise) ["Point"]
+
+Number aWATTar_today_max_hour "aWATTar_today_max_hour" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_today_min_hour "aWATTar_today_min_hour" (aWATTar_Stundenpreise) ["Point"]
+String aWATTar_time_today_max "aWATTar_time_today_max" (aWATTar_Stundenpreise) ["Point"]
+String aWATTar_time_today_min "aWATTar_time_today_min" (aWATTar_Stundenpreise) ["Point"]
+
+Number aWATTar_tomorrow_max_hour "aWATTar_tomorrow_max_hour" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_tomorrow_min_hour "aWATTar_tomorrow_min_hour" (aWATTar_Stundenpreise) ["Point"]
+String aWATTar_time_tomorrow_max "aWATTar_time_tomorrow_max" (aWATTar_Stundenpreise) ["Point"]
+String aWATTar_time_tomorrow_min "aWATTar_time_tomorrow_min" (aWATTar_Stundenpreise) ["Point"]
