@@ -194,7 +194,7 @@ aWATTar_price_min.sendCommand(price_min)
 //
 // calculate the max to min for price scale (should be dividable by 4)
 //
-if (price_min > 0.0) {
+if (price_min >= 0.0) {
   price_scale_max = ((price_max/4).intValue * 4) + 4
   price_scale_min = 0
 } else {
