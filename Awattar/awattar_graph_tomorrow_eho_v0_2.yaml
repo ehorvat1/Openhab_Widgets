@@ -44,7 +44,7 @@ props:
       name: date_string
       required: false
       type: TEXT
-    - description: "String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verfÅgbar)"
+    - description: "String to show when no tomorrow data is available (eg. ....Daten erst ab 14:00 verf¬Ågbar)"
       label: No tomorrows data String
       name: nodata_string
       required: false
@@ -145,7 +145,7 @@ slots:
         default:
           - component: text
             config:
-              content: =@@'aWATTar_price_scale_max'
+              content: =@@'aWATTar_price_scale_100'
               fill: black
               style:
                 font-size: 44px
@@ -153,7 +153,7 @@ slots:
               y: 7%
           - component: text
             config:
-              content: =@@'aWATTar_price_scale_max' * 0.75
+              content: =@@'aWATTar_price_scale_75'
               fill: black
               style:
                 font-size: 44px
@@ -161,7 +161,7 @@ slots:
               y: 28%
           - component: text
             config:
-              content: =@@'aWATTar_price_scale_max' * 0.5
+              content: =@@'aWATTar_price_scale_50'
               fill: black
               style:
                 font-size: 44px
@@ -169,7 +169,7 @@ slots:
               y: 48%
           - component: text
             config:
-              content: =@@'aWATTar_price_scale_max' * 0.25
+              content: =@@'aWATTar_price_scale_25'
               fill: black
               style:
                 font-size: 44px
@@ -177,7 +177,7 @@ slots:
               y: 71%
           - component: text
             config:
-              content: =@@'aWATTar_price_scale_max' * 0.0
+              content: =@@'aWATTar_price_scale_0'
               fill: black
               style:
                 font-size: 44px
