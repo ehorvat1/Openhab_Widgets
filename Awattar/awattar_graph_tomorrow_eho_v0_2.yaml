@@ -92,7 +92,7 @@ props:
       name: opacity_bars
       required: false
   parameterGroups: []
-timestamp: Dec 25, 2023, 10:13:38 PM
+timestamp: Dec 26, 2023, 11:36:03 AM
 component: f7-card
 config:
   style:
@@ -399,7 +399,7 @@ slots:
               stroke-width: 4px
               width: 2.4%
               x: 4.9%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '00' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '00' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '00' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '00' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 1) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 1) ? (props.min_color) : (props.std_color)"
@@ -409,7 +409,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 8%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '01' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '01' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '01' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '01' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 2) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 2) ? (props.min_color) : (props.std_color)"
@@ -419,7 +419,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 12%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '02' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '02' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '02' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '02' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 3) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 3) ? (props.min_color) : (props.std_color)"
@@ -429,7 +429,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 16%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '03' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '03' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '03' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor') - (items[props.prefix + props.prefix_tomorrow + '03' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 4) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 4) ? (props.min_color) : (props.std_color)"
@@ -439,7 +439,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 20%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '04' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '04' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '04' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '04' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 5) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 5) ? (props.min_color) : (props.std_color)"
@@ -449,7 +449,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 24%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '05' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '05' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '05' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '05' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 6) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 6) ? (props.min_color) : (props.std_color)"
@@ -459,7 +459,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 28%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '06' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '06' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '06' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '06' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 7) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 7) ? (props.min_color) : (props.std_color)"
@@ -469,7 +469,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 32%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '07' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '07' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '07' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '07' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 8) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 8) ? (props.min_color) : (props.std_color)"
@@ -479,7 +479,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 36%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '08' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '08' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '08' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '08' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 9) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 9) ? (props.min_color) : (props.std_color)"
@@ -489,7 +489,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 40%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '09' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '09' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '09' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '09' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 10) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 10) ? (props.min_color) : (props.std_color)"
@@ -499,7 +499,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 44%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '10' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '10' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '10' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '10' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 11) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 11) ? (props.min_color) : (props.std_color)"
@@ -509,7 +509,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 48%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '11' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '11' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '11' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '11' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 12) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 12) ? (props.min_color) : (props.std_color)"
@@ -519,7 +519,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 52%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '12' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '12' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '12' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '12' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 13) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 13) ? (props.min_color) : (props.std_color)"
@@ -529,7 +529,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 56%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '13' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '13' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '13' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '13' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 14) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 14) ? (props.min_color) : (props.std_color)"
@@ -539,7 +539,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 60%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '14' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '14' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '14' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '14' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 15) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 15) ? (props.min_color) : (props.std_color)"
@@ -549,7 +549,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 64%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '15' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '15' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '15' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '15' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 16) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 16) ? (props.min_color) : (props.std_color)"
@@ -559,7 +559,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 68%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '16' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '16' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '16' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '16' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 17) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 17) ? (props.min_color) : (props.std_color)"
@@ -569,7 +569,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 72%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '17' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '17' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '17' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '17' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 18) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 18) ? (props.min_color) : (props.std_color)"
@@ -579,7 +579,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 76%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '18' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '18' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '18' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '18' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 19) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 19) ? (props.min_color) : (props.std_color)"
@@ -589,7 +589,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 80%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '19' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '19' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '19' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '19' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 20) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 20) ? (props.min_color) : (props.std_color)"
@@ -599,7 +599,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 84%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '20' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '20' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '20' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '20' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 21) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 21) ? (props.min_color) : (props.std_color)"
@@ -609,7 +609,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 88%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '21' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '21' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '21' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '21' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 22) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 22) ? (props.min_color) : (props.std_color)"
@@ -619,7 +619,7 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 92%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '22' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '22' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '22' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '22' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
           - component: rect
             config:
               fill: "= (@@'aWATTar_tomorrow_max_hour' == 23) ? (props.max_color) : (@@'aWATTar_tomorrow_min_hour' == 23) ? (props.min_color) : (props.std_color)"
@@ -629,4 +629,4 @@ slots:
               stroke-width: 4px
               width: 3.333%
               x: 96%
-              y: "= (items[props.prefix + props.prefix_tomorrow + '23' + props.post].state > 0) ? (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '23' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (89.6 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
+              y: "= (items[props.prefix + props.prefix_tomorrow + '23' + props.post].state > 0) ? (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')  - (items[props.prefix + props.prefix_tomorrow + '23' + props.post].state * @@'aWATTar_price_scale_factor')) + '%' : (90 + (@@'aWATTar_price_scale_0' * @@'aWATTar_price_scale_factor')) + '%' "
