@@ -23,10 +23,11 @@ A (maybe not complete) list of changes to version OH3_Livio_Energy_Summary_MikeT
 12) Gauge in the middle shows now just an individual Item: itemSelfConsumption and a configurable ItemName. No color changes here any more.
 
 in v2, Changes to v1 :
-
 1) Animations (except for Battery) are now changing in size and speed, depending on their representing value. Search for “.state)” in the code to see how its done.
 2) Border width of the blocks set to 2px
-3) Battery animation. Charging animation visible if ItemBattery is negative. Decharging (towards house) visible if ItemBattery is positive. Search for “(@props.itemBattery) < 0)” and “(@props.itemBattery) > 0)” in the code to find how/where this is done.
+3) Battery animation. Charging animation visible if ItemBattery is negative. Decharging (towards house) visible if ItemBattery is positive.
+                       Search for “(@props.itemBattery) < 0)” and “(@props.itemBattery) > 0)” in the code to find how/where this is done.
 
 
-v3: added a 2nd Item to Non Fossile Block. 31.Mar 2024
+in v3, Changes to v2: 
+1) added a 2nd Item to Non Fossile Block. 31.Mar 2024
