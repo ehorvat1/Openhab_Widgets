@@ -27,3 +27,6 @@ Number aWATTar_tomorrow_max_hour "aWATTar_tomorrow_max_hour" (aWATTar_Stundenpre
 Number aWATTar_tomorrow_min_hour "aWATTar_tomorrow_min_hour" (aWATTar_Stundenpreise) ["Point"]
 String aWATTar_time_tomorrow_max "aWATTar_time_tomorrow_max" (aWATTar_Stundenpreise) ["Point"]
 String aWATTar_time_tomorrow_min "aWATTar_time_tomorrow_min" (aWATTar_Stundenpreise) ["Point"]
+
+Number aWATTar_today_average "aWATTar_today_average" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_tomorrow_average "aWATTar_tomorrow_average" (aWATTar_Stundenpreise) ["Point"]
