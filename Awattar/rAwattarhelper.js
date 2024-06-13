@@ -22,6 +22,10 @@ var price_scale_max = 0
 var price_scale_min = 0
 var hour_tomorrow_min = 0
 //
+var price_today_avg = 0.0
+var price_tomorrow_avg = 0.0
+
+//
 var act_hour = 0
 var today_string = ""
 var tomorrow_string = ""
@@ -212,6 +216,65 @@ aWATTar_price_scale_75.sendCommand((((price_scale_max - price_scale_min) * 0.75)
 aWATTar_price_scale_100.sendCommand(price_scale_max)
 //
 aWATTar_price_scale_factor.sendCommand(87.0 / (price_scale_max - price_scale_min))  //Constant must include a decimal point !
+//
+//
+price_today_avg = (aWATTar_Stundenpreise_Today00_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today01_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today02_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today03_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today04_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today05_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today06_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today07_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today08_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today09_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today10_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today11_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today12_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today13_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today14_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today15_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today16_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today17_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today18_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today19_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today20_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today21_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today22_Totalgross.state as Number).doubleValue
+price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today23_Totalgross.state as Number).doubleValue
+price_today_avg = (price_today_avg / 24.0)
+//
+aWATTar_today_average.sendCommand(price_today_avg)  // Send average to item (today)
+//
+//
+price_tomorrow_avg = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow01_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow02_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow03_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow04_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow05_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow06_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow07_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow08_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow09_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow10_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow11_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow12_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow13_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow14_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow15_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow16_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow17_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow18_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow19_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow20_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow21_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue
+price_tomorrow_avg = (price_tomorrow_avg / 24.0)
+//
+aWATTar_tomorrow_average.sendCommand(price_tomorrow_avg)  // Send average to item (Tomorrow)
+//
 //
 logInfo("Rule rAwattarhelper", "Rule rAwattarhelper was running at: {}", now.toLocalDateTime().toString())
 //
