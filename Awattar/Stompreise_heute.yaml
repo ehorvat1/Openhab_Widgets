@@ -1,6 +1,8 @@
-component: widget:awattar_graph_today_eho_v0_1
+component: widget:awattar_graph_today_eho_v0_3
 config:
-  act_string: "Aktuell = "
+  widget_title: Strompreise
+  act_string: "Akt. = "
+  avg_string: "Mittelw. = "
   date_string: aWATTar_Date_today
   max_color: red
   max_string: "Max = "
@@ -15,4 +17,3 @@ config:
   prefix_today: _Today
   std_color: blue
   today_string: heute
-  widget_title: Strompreise
