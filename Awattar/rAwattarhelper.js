@@ -247,31 +247,33 @@ price_today_avg = (price_today_avg / 24.0)
 aWATTar_today_average.sendCommand(price_today_avg)  // Send average to item (today)
 //
 //
-price_tomorrow_avg = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow01_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow02_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow03_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow04_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow05_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow06_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow07_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow08_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow09_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow10_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow11_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow12_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow13_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow14_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow15_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow16_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow17_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow18_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow19_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow20_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow21_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue
-price_tomorrow_avg = (price_tomorrow_avg / 24.0)
+if ((aWATTar_Stundenpreise_Tomorrow00_Totalgross.state != UNDEF && aWATTar_Stundenpreise_Tomorrow00_Totalgross.state != NULL )) { // do not use tomorrow items if not valid (until 14:00)
+  price_tomorrow_avg = (aWATTar_Stundenpreise_Tomorrow00_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow01_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow02_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow03_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow04_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow05_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow06_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow07_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow08_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow09_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow10_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow11_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow12_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow13_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow14_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow15_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow16_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow17_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow18_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow19_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow20_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow21_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow22_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = price_tomorrow_avg + (aWATTar_Stundenpreise_Tomorrow23_Totalgross.state as Number).doubleValue
+  price_tomorrow_avg = (price_tomorrow_avg / 24.0)
+}
 //
 aWATTar_tomorrow_average.sendCommand(price_tomorrow_avg)  // Send average to item (Tomorrow)
 //
