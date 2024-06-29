@@ -506,7 +506,7 @@ slots:
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorSolar) ? (props.ColorSolar) : 'orange'"
-                                      r: =2 + (Number.parseFloat(items[props.itemSolar].state)/2000)
+                                      r: =2 + ((Number.parseFloat(items[props.itemSolar].state) - (Number.parseFloat(items[props.itemProductionToGrid].state)))/2000)                                                                           
                                       style:
                                         stroke-width: 4
                                       tag: circle
