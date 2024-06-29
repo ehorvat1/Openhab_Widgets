@@ -283,7 +283,7 @@ props:
       name: borderRadius
       required: false
   parameterGroups: []
-timestamp: Jun 29, 2024, 1:35:19 PM
+timestamp: Jun 29, 2024, 10:34:31 PM
 component: f7-card
 config:
   title: = props.title
@@ -596,11 +596,11 @@ slots:
                                       stroke-width: 1
                                       tag: path
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"                                                                                                            
+                                      visible: "=((Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
-                                      r: =2 + (Math.abs(Number.parseFloat(items[props.itemBattery2].state))/2000)
+                                      r: =2 + (Math.abs(Number.parseFloat(items[props.itemBattery2].state))/750)
                                       style:
                                         stroke-width: 4
                                       tag: circle
@@ -633,7 +633,7 @@ slots:
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
-                                      r: =2 + (Math.abs(Number.parseFloat(items[props.itemBattery2].state))/2000)
+                                      r: =2 + (Math.abs(Number.parseFloat(items[props.itemBattery2].state))/750)
                                       style:
                                         stroke-width: 4
                                       tag: circle
@@ -692,7 +692,7 @@ slots:
                               config:
                                 color: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
                                 height: 20px
-                                icon: if:mdi:battery-charging 
+                                icon: if:mdi:battery-charging
                             - component: oh-link
                               config:
                                 iconColor: "=(props.itemBattery2) ? ((Number.parseFloat(@props.itemBattery2) < 0) ? 'purple' : 'blue') : ''"
