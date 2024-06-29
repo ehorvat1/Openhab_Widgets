@@ -283,7 +283,7 @@ props:
       name: borderRadius
       required: false
   parameterGroups: []
-timestamp: Dec 13, 2023, 11:42:02 AM
+timestamp: Jun 29, 2024, 1:35:19 PM
 component: f7-card
 config:
   title: = props.title
@@ -450,9 +450,6 @@ slots:
                                 icon: if:mdi:solar-power-variant
                             - component: oh-link
                               config:
-                                iconColor: blue
-                                iconF7: "=(props.itemProductionToGrid) ? 'arrow_down' : ''"
-                                iconSize: 12px
                                 style:
                                   font-size: 12px
                                   white-space: nowrap
@@ -506,7 +503,7 @@ slots:
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorSolar) ? (props.ColorSolar) : 'orange'"
-                                      r: =2 + ((Number.parseFloat(items[props.itemSolar].state) - (Number.parseFloat(items[props.itemProductionToGrid].state)))/2000)                                                                           
+                                      r: =2 + ((Number.parseFloat(items[props.itemSolar].state) - (Number.parseFloat(items[props.itemProductionToGrid].state)))/2000)
                                       style:
                                         stroke-width: 4
                                       tag: circle
@@ -599,7 +596,7 @@ slots:
                                       stroke-width: 1
                                       tag: path
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((props.itemBattery) && (props.itemSolar) && (Number.parseFloat(@props.itemBattery) < 0)) ? true : false"
+                                      visible: "=((Number.parseFloat(@props.itemBattery2) < 0)) ? true : false"
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
@@ -608,7 +605,7 @@ slots:
                                         stroke-width: 4
                                       tag: circle
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((props.itemBattery) && (props.itemSolar) && (Number.parseFloat(@props.itemBattery) < 0)) ? true : false"
+                                      visible: "=((Number.parseFloat(@props.itemBattery2) < 0)) ? true : false"
                                     slots:
                                       default:
                                         - component: f7-row
@@ -632,7 +629,7 @@ slots:
                                       stroke-width: 1
                                       tag: path
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery) > 0)) ? true : false"
+                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
@@ -641,7 +638,7 @@ slots:
                                         stroke-width: 4
                                       tag: circle
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery) > 0)) ? true : false"
+                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"
                                     slots:
                                       default:
                                         - component: f7-row
@@ -695,11 +692,11 @@ slots:
                               config:
                                 color: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
                                 height: 20px
-                                icon: if:mdi:battery-charging
+                                icon: if:mdi:battery-charging 
                             - component: oh-link
                               config:
-                                iconColor: "=(props.itemBattery) ? ((Number.parseFloat(@props.itemBattery) < 0) ? 'purple' : 'blue') : ''"
-                                iconF7: "=(props.itemBattery) ? ((Number.parseFloat(@props.itemBattery) < 0) ? 'arrow_down' : 'arrow_up') : ''"
+                                iconColor: "=(props.itemBattery2) ? ((Number.parseFloat(@props.itemBattery2) < 0) ? 'purple' : 'blue') : ''"
+                                iconF7: "=(props.itemBattery2) ? ((Number.parseFloat(@props.itemBattery2) < 0) ? 'arrow_down' : 'arrow_up') : ''"
                                 iconSize: 12px
                                 style:
                                   font-size: 12px
