@@ -596,22 +596,22 @@ slots:
                                       stroke-width: 1
                                       tag: path
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((Number.parseFloat(@props.itemBattery2) < 0)) ? true : false"
+                                      visible: "=((Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"                                                                                                            
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
-                                      r: 2
+                                      r: =2 + (Math.abs(Number.parseFloat(items[props.itemBattery2].state))/2000)
                                       style:
                                         stroke-width: 4
                                       tag: circle
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((Number.parseFloat(@props.itemBattery2) < 0)) ? true : false"
+                                      visible: "=((Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"
                                     slots:
                                       default:
                                         - component: f7-row
                                           config:
                                             calcMode: linear
-                                            dur: 5s
+                                            dur: =1 + 3000/(Math.abs(Number.parseFloat(items[props.itemBattery2].state)) +500)
                                             repeatCount: indefinite
                                             tag: animateMotion
                                           slots:
@@ -629,22 +629,22 @@ slots:
                                       stroke-width: 1
                                       tag: path
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"
+                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery2) < 0)) ? true : false"
                                   - component: f7-row
                                     config:
                                       fill: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
-                                      r: 2
+                                      r: =2 + (Math.abs(Number.parseFloat(items[props.itemBattery2].state))/2000)
                                       style:
                                         stroke-width: 4
                                       tag: circle
                                       vector-effect: non-scaling-stroke
-                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery2) > 0)) ? true : false"
+                                      visible: "=((props.itemBattery) && (Number.parseFloat(@props.itemBattery2) < 0)) ? true : false"
                                     slots:
                                       default:
                                         - component: f7-row
                                           config:
                                             calcMode: linear
-                                            dur: 5s
+                                            dur: =1 + 3000/(Math.abs(Number.parseFloat(items[props.itemBattery2].state)) +500)
                                             repeatCount: indefinite
                                             tag: animateMotion
                                           slots:
