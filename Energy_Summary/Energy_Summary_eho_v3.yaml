@@ -695,8 +695,8 @@ slots:
                                 icon: if:mdi:battery-charging
                             - component: oh-link
                               config:
-                                iconColor: "=(props.itemBattery2) ? ((Number.parseFloat(@props.itemBattery2) < 0) ? 'purple' : 'blue') : ''"
-                                iconF7: "=(props.itemBattery2) ? ((Number.parseFloat(@props.itemBattery2) < 0) ? 'arrow_down' : 'arrow_up') : ''"
+                                iconColor: "=(props.ColorBattery) ? (props.ColorBattery) : 'green'"
+                                iconF7: "=(props.itemBattery2) ? ((Number.parseFloat(@props.itemBattery2) < 0) ? 'arrow_up' : 'arrow_down') : ''"
                                 iconSize: 12px
                                 style:
                                   font-size: 12px
