@@ -50,9 +50,9 @@ Running rule every 5 minutes is not mandatory, rule should run at least every 1 
 
 In developer tools go to "Widgets" page.
    
-   a) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_today_eho_v0_2.yaml**. Press Save. Go Back
+   a) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_today_eho_v0_3.yaml**. Press Save. Go Back
    
-   b) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_tomorrow_eho_v0_2.yaml**. Press Save. Go Back
+   b) Press "+" button to add a Widget. Exchange standard code with all lines from **awattar_graph_tomorrow_eho_v0_3.yaml**. Press Save. Go Back
    
 ##### 6) Add Widgets to a MainUI Layout or tabbed Page.
     
