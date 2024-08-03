@@ -56,7 +56,7 @@ In developer tools go to "Widgets" page.
    
 ##### 6) Add Widgets to a MainUI Layout or tabbed Page.
     
-   After pressing "+" to add a card, select one of the just created Widgets "awattar_graph_today_eho_v0_2" or "awattar_graph_tomorrow_eho_v0_2".
+   After pressing "+" to add a card, select one of the just created Widgets "awattar_graph_today_eho_v0_3" or "awattar_graph_tomorrow_eho_v0_3".
    Configure the Widgets. 
    
    You may insert code from Stompreise_heute.yaml for todays widget or from Stompreise_morgen.yaml for tomorrows widget.
