@@ -8,6 +8,7 @@ Above shown: Today Widget containing negative prices /  Tomorrow Widget containi
 
 ### Installation:
 Version v0_3 adds average price calculation and shows this right after actual price.
+
 Version v0_4 improves design/colors for dark mode.
 
 ##### 1) Install aWATTar Binding (https://www.openhab.org/addons/bindings/awattar/)
