@@ -1,6 +1,9 @@
 ### Widgets snapshots:
-<img src="Price_plot_today_v3.png"> <img src="Price_plot_tomorrow_v3.png"> <img src="Price_plot_tomorrow_nodata_v1.png">
+<img src="Price_plot_today_v4.png"> <img src="Price_plot_tomorrow_v4.png"> <img src="Price_plot_tomorrow_nodata_v1.png">
 Above shown: Today Widget /  Tomorrow Widget with data / Tomorrow Widget with no data
+
+<img src="Price_plot_today_dark_v4.png"> <img src="Price_plot_tomorrow_dark_v4.png">
+Above shown: Today Widget (dark mode) /  Tomorrow Widget with data (dark mode)
 
 <img src="Price_plot_today_with_neg_prices_v2.png"> <img src="Price_plot_tomorrow_with_neg_prices_v2.png">
 
