@@ -34,3 +34,7 @@ in v3, Changes to v2:
 2) removed arrow icon in solar block. 30.Jun 2024
 3) Power animation from solar to house corrected.
 4) Battery animation modified. Follows now itemBattery2 which should be linked to Battery charging/discharging power (showing charging when > 0, Discharging if < 0).
+
+   in v4, Changes to v3: 
+1) added a 3rd Item to Non Fossile Block. 13.Okt 2024
+
