@@ -1,18 +1,18 @@
 ### Widgets snapshots:
-<img src="Price_plot_today_v3.png"> <img src="Price_plot_tomorrow_v3.png"> <img src="Price_plot_tomorrow_nodata_v1.png">
+<img src="Price_plot_today_v4.png"> <img src="Price_plot_tomorrow_v4.png"> <img src="Price_plot_tomorrow_nodata_v1.png">
 Above shown: Today Widget /  Tomorrow Widget with data / Tomorrow Widget with no data
 
 <img src="Price_plot_today_with_neg_prices_v2.png"> <img src="Price_plot_tomorrow_with_neg_prices_v2.png">
 
 Above shown: Today Widget containing negative prices /  Tomorrow Widget containing negative prices (both Version v0_2)
 
-### Installation:
+### Versions:
 Version v0_3 adds average price calculation and shows this right after actual price.
 
 Version v0_4 improves design/colors for dark mode.
 
 Version v0_5 now working also if "prefix" is left empty (tx to jrieder)
-
+### Installation:
 ##### 1) Install aWATTar Binding (https://www.openhab.org/addons/bindings/awattar/)
 ##### 2) Add Things: 
  a) Add an "aWATTar Bridge" thing. Using UI, leave default lable "aWATTar Bridge" , modify country and VAT and base price to your needs
