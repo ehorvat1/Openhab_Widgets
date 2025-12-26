@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // OpenHAB Rule DSL file rAwattarhelper.js to support bar chart for Awattar prices
-// Should run in a cron event every 5 to 60 minutes (at least at full hour)
+// Should run in a cron event every 5 to 60 minutes (at least at full hour)....so the cron expression to run every 5 minutes is: 0 0/5 * * * ? *
 //
 //
 // see also Github: https://github.com/ehorvat1/Openhab_Widgets/tree/main
@@ -244,7 +244,7 @@ price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today22_Totalgross.st
 price_today_avg = price_today_avg + (aWATTar_Stundenpreise_Today23_Totalgross.state as Number).doubleValue
 price_today_avg = (price_today_avg / 24.0)
 //
-aWATTar_today_average.sendCommand(price_today_avg)  // Send average to item (today)
+aWATTar_today_average.sendCommand(Math::round(price_today_avg * 100) / 100.0)  // Send rounded average to item (today)
 //
 //
 if ((aWATTar_Stundenpreise_Tomorrow00_Totalgross.state != UNDEF && aWATTar_Stundenpreise_Tomorrow00_Totalgross.state != NULL )) { // do not use tomorrow items if not valid (until 14:00)
@@ -275,7 +275,7 @@ if ((aWATTar_Stundenpreise_Tomorrow00_Totalgross.state != UNDEF && aWATTar_Stund
   price_tomorrow_avg = (price_tomorrow_avg / 24.0)
 }
 //
-aWATTar_tomorrow_average.sendCommand(price_tomorrow_avg)  // Send average to item (Tomorrow)
+aWATTar_tomorrow_average.sendCommand(Math::round(price_tomorrow_avg * 100) / 100.0)  // Send rounded average to item (Tomorrow)
 //
 //
 logInfo("Rule rAwattarhelper", "Rule rAwattarhelper was running at: {}", now.toLocalDateTime().toString())

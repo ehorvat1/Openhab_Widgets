@@ -28,5 +28,14 @@ Number aWATTar_tomorrow_min_hour "aWATTar_tomorrow_min_hour" (aWATTar_Stundenpre
 String aWATTar_time_tomorrow_max "aWATTar_time_tomorrow_max" (aWATTar_Stundenpreise) ["Point"]
 String aWATTar_time_tomorrow_min "aWATTar_time_tomorrow_min" (aWATTar_Stundenpreise) ["Point"]
 
-Number aWATTar_today_average "aWATTar_today_average" (aWATTar_Stundenpreise) ["Point"]
-Number aWATTar_tomorrow_average "aWATTar_tomorrow_average" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_today_average "aWATTar_today_average" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.2f  ct/kWh"]}
+Number aWATTar_tomorrow_average "aWATTar_tomorrow_average" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.2f  ct/kWh"]}
+
+Number aWATTar_act_hour_costs_res "Reset aWATTar_act_hour_costs" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_act_hour_costs "aWATTar_act_hour_costs" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.1f Euro"]}
+Number aWATTar_last_hour_costs "aWATTar_last_hour_costs" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.1f Euro"]}
+Number aWATTar_act_day_costs "aWATTar_act_day_costs" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.1f Euro"]}
+Number aWATTar_act_day_costs_res "Reset aWATTar_act_days_costs" (aWATTar_Stundenpreise) ["Point"]
+Number aWATTar_last_day_costs "aWATTar_last_day_costs" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.1f Euro"]}
+
+Number aWATTar_costs_counter "aWATTar costs counter" (aWATTar_Stundenpreise) ["Point"] {stateDescription=" "[pattern="%,.1f Euro"]}
